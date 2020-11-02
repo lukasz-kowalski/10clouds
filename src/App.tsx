@@ -1,10 +1,14 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import Router from 'router/Router';
+import { defaultTheme } from 'themes/default-theme';
 
-const App = () => {
+const App: React.FC = () => {
   return (
-    <div className="App">
-    </div>
+    <ThemeProvider theme={defaultTheme}>
+      <Router />
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
